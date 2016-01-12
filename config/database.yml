@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  pool: 5
+
+development:
+  <<: *default
+  database: algolab-tools_development
+
+test:
+  <<: *default
+  database: algolab-tools_test
+
+production:
+  <<: *default
+  database: algolab-tools_production
+  username: algolab-tools
+  password: <%= ENV['ALGOLAB-TOOLS_DATABASE_PASSWORD'] %>
