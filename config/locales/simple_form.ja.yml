@@ -1,0 +1,9 @@
+ja:
+  simple_form:
+    "yes": 'はい'
+    "no": 'いいえ'
+    required:
+      text: '必須'
+      mark: '*'
+    error_notification:
+      default_message: "エラーがあります。確認してください。"

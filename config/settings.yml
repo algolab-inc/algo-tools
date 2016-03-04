@@ -1,0 +1,16 @@
+application:
+  title: 'algoTools'
+  release_date: '2016-02-02'
+  author:
+    en: 'Algo Lab Inc.'
+    ja: '株式会社アルゴラボ'
+google_api:
+  name: algoTools
+  scope: userinfo.email,userinfo.profile,https://www.googleapis.com/auth/calendar
+  client_id: <%= ENV['GOOGLE_CLIENT_ID'] %>
+  client_secret: <%= ENV['GOOGLE_CLIENT_SECRET'] %>
+google_analytics:
+  tracker: <%= ENV['GOOGLE_ANALYTICS_TRACKER'] %>
+slack:
+  webhook_url: <%= ENV['SLACK_WEBHOOK_URL'] %>
+  channel: <%= ENV['SLACK_CHANNEL'] %>

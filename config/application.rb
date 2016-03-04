@@ -4,14 +4,18 @@ require 'rails/all'
 
 Bundler.require(*Rails.groups)
 
-module AlgolabTools
+module AlgoTools
   class Application < Rails::Application
-    config.generators.template_engine = :slim
-    config.generators.test_framework = :rspec
-    config.generators.stylesheets = false
-    config.generators.javascripts = false
-    config.generators.helper = false
-  
+    config.generators do |g|
+      g.template_engine = :slim
+      g.test_framework = :rspec
+      g.stylesheets = false
+      g.javascripts = false
+      g.helper = false
+    end
+    config.autoload_paths += %W(#{config.root}/lib)
+    config.i18n.default_locale = :ja
+    config.time_zone = 'Tokyo'
     config.active_record.raise_in_transactional_callbacks = true
   end
 end

@@ -1,0 +1,7 @@
+footer.text-center
+  .container
+    .text-muted
+      ul.list-inline
+        li= link_to '利用規約', '/terms'
+        li= link_to '運営会社', 'http://www.algolab.jp', target: '_blank'
+      p &copy;#{Date.parse(Settings.application.release_date).year} #{Settings.application.author.en}

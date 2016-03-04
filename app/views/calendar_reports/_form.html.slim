@@ -1,0 +1,7 @@
+.well
+  = simple_form_for calendar_report, html: {class: 'form-vertical'} do |f|
+    fieldset
+      = f.input :start_on, input_html: {class: 'datepicker'}
+      = f.input :end_on, input_html: {class: 'datepicker'}
+      = f.input :delimiter_id, collection: CalendarReportDelimiter.all.map{|d| [d.value, d.id]}
+      = f.button :submit, '解析する', class: 'btn-primary'

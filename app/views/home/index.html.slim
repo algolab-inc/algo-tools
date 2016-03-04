@@ -1,0 +1,14 @@
+.row
+  .col-lg-12
+    .page-header
+      h1 #{Settings.application.title}
+    p #{link_to '株式会社アルゴラボ', ''} が制作しているツール集です。ソースコードは #{link_to 'GitHub', 'https://github.com/algolab-inc/algo-tools', target: '_blank'} にて公開しています。
+.row
+  .col-lg-12
+    h2 Tools
+    table.table.table-bordered.table-hover
+      tbody
+        - Tool.all.each do |tool|
+          tr
+            td= link_to tool.title, "/#{tool.key}"
+            td= tool.lead

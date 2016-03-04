@@ -1,0 +1,8 @@
+.row
+  .col-lg-12
+    .page-header
+      h1= @error.title
+  .col-lg-12
+    p= @error.message
+  .col-lg-12
+    = link_to 'ホームへ', root_path, class: 'btn btn-primary'

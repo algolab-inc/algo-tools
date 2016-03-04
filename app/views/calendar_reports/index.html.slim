@@ -1,0 +1,13 @@
+- breadcrumb :calendar_reports
+.row
+  .col-lg-12
+    .page-header
+      h1= current_tool.title
+.row
+  .col-lg-12
+.row
+  .col-lg-12
+    = render 'form', calendar_report: @calendar_report
+hr
+h3 デモ画面
+= render 'demo'

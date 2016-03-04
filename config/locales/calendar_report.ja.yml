@@ -1,0 +1,9 @@
+ja:
+  activemodel:
+    models:
+      calednar_report: カレンダー
+    attributes:
+      calendar_report:
+        start_on: 開始日
+        end_on: 終了日
+        delimiter_id: 区切り文字

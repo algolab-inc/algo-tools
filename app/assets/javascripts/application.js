@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require react
+//= require react_ujs
+//= require marked
+//= require cosmo
+//= require moment
+//= require moment/ja
+//= require bootstrap-datetimepicker
+//= require_tree ./application
+//= require components
 

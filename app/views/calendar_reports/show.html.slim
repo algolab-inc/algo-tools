@@ -1,0 +1,12 @@
+- breadcrumb :calendar_report, @calendar_report
+.row
+  .col-lg-12
+    .page-header
+      h1= @calendar_report.title
+#calendar-report-box
+  - if @calendar_report.errors.blank?
+    = react_component('CalendarReportBox', url: calendar_report_event_summaries_path(@calendar_report))
+.row
+  .col-lg-12
+    = render 'form', calendar_report: @calendar_report
+

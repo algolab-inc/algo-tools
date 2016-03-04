@@ -1,0 +1,4 @@
+- flash.each do |type, message|
+  = content_tag :div, class: "alert alert-dismissible alert-#{type}" do
+    button.close[data-dismiss="alert"] ×
+    p= message
