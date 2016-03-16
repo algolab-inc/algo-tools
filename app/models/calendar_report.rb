@@ -54,7 +54,7 @@ class CalendarReport
         Hash.new{|h1,k1| h1[k1] = Hash.new{|h2,k2| h2[k2] = {}}}
       ) {|event,trees|
         del_l, del_r = delimiter.value.split.map{|d| Regexp.escape(d)} rescue ['', '']
-        if (summaries = event.summary.scan(/#{del_l}[^#{del_l}|^#{del_r}]*#{del_r}/)).present?
+        if (summaries = event.summary.to_s.scan(/#{del_l}[^#{del_l}|^#{del_r}]*#{del_r}/)).present?
           start_time = Time.parse((event.start.date_time || event.start.date).to_s)
           end_time   = Time.parse((event.end.date_time   || event.end.date  ).to_s)
           time = (end_time - start_time) / (60 * 60)
