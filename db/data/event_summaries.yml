@@ -2,23 +2,53 @@
   parent_id: nil
   depth: 0
   title: 'トップ'
-- id: 'demo001'
+- id: 'demo-001'
   parent_id: 'top'
   depth: 1
-  title: 'demo001'
+  title: 'demo-001'
   time: 6
   daily_data:
     <%= Date.today %>: 3
     <%= 1.days.ago %>: 2
     <%= 2.days.ago %>: 1
     <%= 3.days.ago %>: 0
-- id: 'demo002'
+- id: 'demo-002'
   parent_id: 'top'
   depth: 1
-  title: 'demo002'
+  title: 'demo-002'
   time: 6
   daily_data:
     <%= Date.today %>: 0
     <%= 1.days.ago %>: 1
     <%= 2.days.ago %>: 2
     <%= 3.days.ago %>: 3
+- id: 'demo-003'
+  parent_id: 'top'
+  depth: 1
+  title: 'demo-003'
+  time: 6
+  daily_data:
+    <%= Date.today %>: 2
+    <%= 1.days.ago %>: 3
+    <%= 2.days.ago %>: 0
+    <%= 3.days.ago %>: 1
+- id: 'demo-001-01'
+  parent_id: 'demo-001'
+  depth: 2
+  title: 'demo-001'
+  time: 3
+  daily_data:
+    <%= Date.today %>: 1
+    <%= 1.days.ago %>: 1
+    <%= 2.days.ago %>: 1
+    <%= 3.days.ago %>: 0
+- id: 'demo-001-02'
+  parent_id: 'demo-001'
+  depth: 2
+  title: 'demo-001'
+  time: 3
+  daily_data:
+    <%= Date.today %>: 2
+    <%= 1.days.ago %>: 1
+    <%= 2.days.ago %>: 0
+    <%= 3.days.ago %>: 0
